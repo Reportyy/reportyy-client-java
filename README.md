@@ -1,4 +1,5 @@
 # reportyy-client-java
+![Maven Central](https://img.shields.io/maven-central/v/com.reportyy/reportyy-client-java)
 
 Java 11+ client for Reportyy API.
 
@@ -10,7 +11,7 @@ Java 11+ client for Reportyy API.
 ### Gradle
 Add this dependency to your project's build file:
 ```groovy
-implementation "com.reportyy:reportyy-client-java:1.0.0"
+implementation "com.reportyy:reportyy-client-java:0.0.1"
 ```
 
 ### Maven
@@ -19,19 +20,17 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.reportyy</groupId>
   <artifactId>reportyy-client-java</artifactId>
-  <version>1.0.0</version>
+  <version>0.0.1</version>
 </dependency>
 ```
 
 ### Others
 You'll need to manually install the following JARs:
-* [Reportyy Client JAR](https://reportyy.com)
+* [Reportyy Client JAR](https://repo1.maven.org/maven2/com/reportyy/reportyy-client-java/0.0.1/reportyy-client-java-0.0.1.jar)
 * [Jackson JAR](https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.jar)
 
 ## Documentation
-Please see the [Java API docs](https://docs.reportyy.com/quickstart) for the most up-to-date documentation.
-
-You can also refer to the online Javadoc.
+Please see the [Java docs](https://docs.reportyy.com/quickstart) for the most up-to-date documentation.
 
 ## Usage
 
