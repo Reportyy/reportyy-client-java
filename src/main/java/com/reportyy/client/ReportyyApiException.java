@@ -7,8 +7,7 @@ public class ReportyyApiException extends Exception {
         super(errorMessage);
     }
 
-    public ReportyyApiException(String errorMessage, ReportyyApiErrorPayload errorPayload)
-    {
+    public ReportyyApiException(String errorMessage, ReportyyApiErrorPayload errorPayload) {
         super(errorMessage);
 
         this._errorPayload = errorPayload;
