@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+*
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Java
+        id: setup-jre
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          architecture: x64
+
+      - name: Set Test Java Runtime Environment variable
+        run: echo "JAVA_TEST_HOME=${{ steps.setup-jre.outputs.path }}" >> $GITHUB_ENV
+
+      - name: Build & Test
+        run: mvn verify
+        env:
+          REPORTYY_BASE_URL: ${{ secrets.REPORTYY_BASE_URL }}
+          REPORTYY_API_KEY=: ${{ secrets.REPORTYY_API_KEY }}
