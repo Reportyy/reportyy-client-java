@@ -27,7 +27,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           architecture: 'x64'
-          cache: 'mvn'
+          cache: 'maven'
 
       - name: Set Test Java Runtime Environment variable
         run: echo "JAVA_TEST_HOME=${{ steps.setup-jre.outputs.path }}" >> $GITHUB_ENV
