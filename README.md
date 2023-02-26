@@ -1,5 +1,6 @@
 # reportyy-client-java
 ![Maven Central](https://img.shields.io/maven-central/v/com.reportyy/reportyy-client-java)
+[![CI](https://github.com/Reportyy/reportyy-client-java/actions/workflows/ci.yml/badge.svg)](https://github.com/Reportyy/reportyy-client-java/actions/workflows/ci.yml)
 
 Java 11+ client for Reportyy API.
 
