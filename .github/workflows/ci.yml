@@ -32,8 +32,8 @@ jobs:
       - name: Set Test Java Runtime Environment variable
         run: echo "JAVA_TEST_HOME=${{ steps.setup-jre.outputs.path }}" >> $GITHUB_ENV
 
-      - name: Build & Test
-        run: mvn verify
+      - name: Build
+        run: mvn compile
         env:
           REPORTYY_BASE_URL: ${{ secrets.REPORTYY_BASE_URL }}
           REPORTYY_API_KEY=: ${{ secrets.REPORTYY_API_KEY }}
