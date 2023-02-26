@@ -24,8 +24,10 @@ jobs:
         id: setup-jre
         uses: actions/setup-java@v3
         with:
-          java-version: "17"
-          architecture: x64
+          distribution: 'temurin'
+          java-version: '17'
+          architecture: 'x64'
+          cache: 'mvn'
 
       - name: Set Test Java Runtime Environment variable
         run: echo "JAVA_TEST_HOME=${{ steps.setup-jre.outputs.path }}" >> $GITHUB_ENV
